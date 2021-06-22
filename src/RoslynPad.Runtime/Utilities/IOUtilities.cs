@@ -18,7 +18,7 @@ namespace RoslynPad.Utilities
             });
         }
 
-        public static T PerformIO<T>(Func<T> function, T defaultValue = default)
+        public static T PerformIO<T>(Func<T> function, T defaultValue = default!)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace RoslynPad.Utilities
             return defaultValue!;
         }
 
-        public static async Task<T> PerformIOAsync<T>(Func<Task<T>> function, T defaultValue = default)
+        public static async Task<T> PerformIOAsync<T>(Func<Task<T>> function, T defaultValue = default!)
         {
             try
             {
